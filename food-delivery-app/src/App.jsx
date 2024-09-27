@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/navbar";
-import Home from './pages/home/Home';
-import Menu from './pages/menu/Menu';
-import About from './pages/about/About';
-import Contact from './pages/contact/Contact';
+import Home from "./pages/home/Home";
+import Menu from "./pages/menu/Menu";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 
 function App() {
-
   return (
     <div>
       <Navbar />
