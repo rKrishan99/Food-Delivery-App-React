@@ -5,7 +5,7 @@ import { assets } from "../../assets/assets";
 const Navbar = () => {
   return (
     <div>
-      <nav className="p-4">
+      <nav className="p-10">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/">
             <img src={assets.logo} alt="" />
