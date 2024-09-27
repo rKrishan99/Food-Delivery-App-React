@@ -5,17 +5,19 @@ import { assets } from "../../assets/assets";
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-gray-800 p-4">
+      <nav className="p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <img src={assets.logo} alt="" />
+          <Link to="/">
+            <img src={assets.logo} alt="" />
+          </Link>
           <ul className="flex space-x-4">
             <li>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-yellow-500"
-                    : "text-white hover:text-yellow-300"
+                    ? "text-yellow-600"
+                    : "text-gray hover:text-yellow-600"
                 }
                 exact
               >
@@ -27,8 +29,8 @@ const Navbar = () => {
                 to="/menu"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-yellow-500"
-                    : "text-white hover:text-yellow-300"
+                    ? "text-yellow-600"
+                    : "text-gray hover:text-yellow-600"
                 }
               >
                 Menu
@@ -39,8 +41,8 @@ const Navbar = () => {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-yellow-500"
-                    : "text-white hover:text-yellow-300 "
+                    ? "text-yellow-600"
+                    : "text-gray hover:text-yellow-600 "
                 }
               >
                 About
@@ -51,8 +53,8 @@ const Navbar = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-yellow-500"
-                    : "text-white hover:text-yellow-300"
+                    ? "text-yellow-600"
+                    : "text-gray hover:text-yellow-600"
                 }
               >
                 Contact
