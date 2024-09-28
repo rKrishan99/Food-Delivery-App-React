@@ -11,7 +11,7 @@ const ExploreMenu = () => {
         in the mood for a hearty meal or a light snack, you'll find plenty of options to 
         satisfy your cravings. Browse through our menu and find your new favorite dish today!
         </p>
-        <div className="flex justify-between overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100 text-center gap-10 items-center mt-8">
+        <div className="flex justify-between overflow-x-scroll scrollbar-hide text-center gap-10 items-center mt-8">
             {menu_list.map((item, index) => {
                 return (
                     <div key={index}>
