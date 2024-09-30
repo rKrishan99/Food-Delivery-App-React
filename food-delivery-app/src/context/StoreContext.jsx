@@ -14,20 +14,20 @@ const StoreContextProvider = (props) => {
     }
   };
 
-  const removeFormCart = (itemId) => {
+  const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
   useEffect(() => {
     console.log(cartItems);
-  }), [cartItems];
+  },[cartItems]);
 
   const contextValue = {
     food_list,
     cartItems,
     setCartItems,
     addToCart,
-    removeFormCart,
+    removeFromCart,
   };
 
   return (

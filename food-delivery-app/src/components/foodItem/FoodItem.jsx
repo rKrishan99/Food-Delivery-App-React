@@ -4,7 +4,8 @@ import { StoreContext } from "../../context/StoreContext";
 
 const FoodItem = ({ id, name, price, description, image }) => {
   
-  const [cartItems, addToCart, removeFormCart] = useContext(StoreContext);
+  const {cartItems, addToCart, removeFromCart} = useContext(StoreContext);
+  
 
   return (
     <div>
@@ -26,7 +27,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
             <div className="absolute right-2 bottom-2 flex items-center gap-3 p-1 rounded-full bg-white ">
               <img
                 className="w-8 h-8"
-                onClick={() => removeFormCart(id)}
+                onClick={() => removeFromCart(id)}
                 src={assets.remove_icon_red}
                 alt=""
               />
