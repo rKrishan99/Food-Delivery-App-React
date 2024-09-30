@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../../assets/assets";
+import { useState } from "react";
 
 const FoodItem = ({ id, name, price, description, image }) => {
 
@@ -8,6 +9,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
   return (
     <div>
       <div className="w-full shadow-md rounded-md m-auto transition duration-300 overflow-hidden">
+        <div className="relative">
         <img
           src={image}
           alt=""
@@ -15,16 +17,17 @@ const FoodItem = ({ id, name, price, description, image }) => {
         />
         {!itemCount
             ? <img src={assets.add_icon_white} 
-            className="w-20 h-20 absolute top-2 right-2"
+            className="w-8 h-8 absolute right-2 bottom-2"
             onClick={() => setItemCount(prev=>prev+1)} 
             alt=""/>
-            : <div className=""> 
-                <img onClick={()=>setItemCount(prev=>prev-1)} src={assets.remove_icon_red} alt="" />
+            : <div className="absolute right-2 bottom-2 flex items-center gap-3 p-1 rounded-full bg-white "> 
+                <img className="w-8 h-8" onClick={()=>setItemCount(prev=>prev-1)} src={assets.remove_icon_red} alt="" />
                 <p>{itemCount}</p>
-                <img onClick={()=>setItemCount(prev=>prev+1)} src={assets.add_icon_green} alt="" />
+                <img className="w-8 h-8" onClick={()=>setItemCount(prev=>prev+1)} src={assets.add_icon_green} alt="" />
 
             </div>
         }
+        </div>
         <div className="p-6 ">
           <div className="flex justify-between items-center	mb-3">
             <h3 className="text-xl font-semibold">{name}</h3>
