@@ -4,11 +4,12 @@ import ExploreMenu from '../../components/exploreMenu/ExploreMenu'
 import { useState } from 'react'
 
 const Home = () => {
-  const [category, setCategory] = useState('All')
+  const [category, setCategory] = useState('All');
+
   return (
     <div>
       <Header/>
-      <ExploreMenu  />
+      <ExploreMenu category={category} setCategory={setCategory} />
     </div>
   )
 }
