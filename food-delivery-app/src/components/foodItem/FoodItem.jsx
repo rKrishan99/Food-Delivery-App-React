@@ -10,7 +10,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
   return (
     <div>
       <div className="w-full shadow-md rounded-md m-auto transition duration-300 overflow-hidden">
-        <div className="relative">
+         <div className="relative">
           <img
             src={image}
             alt=""
