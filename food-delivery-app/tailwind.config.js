@@ -16,7 +16,7 @@ export default {
         '500px': '500px', 
       },
       margin: {
-        'app-margin-x': '6rem',
+        'app-margin-x': '8rem',
       },
       lineHeight: {
         'extra-loose': '2.5',
