@@ -10,17 +10,20 @@ const FoodDisplay = ({ category }) => {
       <h2 className="text-3xl font-semibold mb-10 mt-12">Top dishes near you</h2>
       <div className="grid gap-10 grid-cols-4 ">
         {food_list.map((item, index) => {
-          return (
-            <FoodItem
-              key={index}
-              id={item.id}
-              name={item.name}
-              description={item.description}
-              price={item.price}
-              image={item.image}
-              
-            />
-          );
+          if(category==="All" || category === item.category){
+            return (
+              <FoodItem
+                key={index}
+                id={item.id}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+                
+              />
+            );
+          }
+          
         })}
       </div>
     </div>
