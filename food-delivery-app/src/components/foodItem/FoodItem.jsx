@@ -3,14 +3,12 @@ import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 
 const FoodItem = ({ id, name, price, description, image }) => {
-  
-  const {cartItems, addToCart, removeFromCart} = useContext(StoreContext);
-  
+  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
 
   return (
     <div>
       <div className="w-full shadow-md rounded-md m-auto transition duration-300 overflow-hidden">
-         <div className="relative">
+        <div className="relative">
           <img
             src={image}
             alt=""
