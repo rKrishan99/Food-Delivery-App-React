@@ -6,7 +6,7 @@ const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
 
   return (
-    <div className="mt-16 mx-app-margin-x my-app-margin-x">
+    <div className="mt-16 px-app-margin-x py-app-margin-x">
       <div className="">
         <div className="grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] items-center text-gray-500 text-lg">
           <p>Items</p>

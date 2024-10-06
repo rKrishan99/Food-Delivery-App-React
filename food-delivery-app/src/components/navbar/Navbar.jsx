@@ -5,8 +5,7 @@ import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
-
-  const {getTotalCartAmount} = useContext(StoreContext); 
+  const { getTotalCartAmount } = useContext(StoreContext);
 
   return (
     <div>
@@ -70,8 +69,16 @@ const Navbar = ({ setShowLogin }) => {
             <img src={assets.search_icon} alt="" />
 
             <Link to="/cart">
-              <img src={assets.basket_icon} alt="" />
-              <div className={getTotalCartAmount() === 0 ? "" : "rounded-full bg-orange-700 w-10"}></div>
+              <div className="flex">
+                <img src={assets.basket_icon} alt="" />
+                <div
+                  className={
+                    getTotalCartAmount() === 0
+                      ? ""
+                      : "rounded-full bg-orange-700 w-10 h-10"
+                  }
+                ></div>
+              </div>
             </Link>
 
             <button
