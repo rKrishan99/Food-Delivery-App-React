@@ -8,6 +8,7 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Footer from "./components/footer/Footer";
 import LoginPopup from "./components/loginPopup/LoginPopup";
+import Cart from "./pages/cart/Cart";
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/loginPopup" element={<LoginPopup />} /> */}
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
       <Footer />

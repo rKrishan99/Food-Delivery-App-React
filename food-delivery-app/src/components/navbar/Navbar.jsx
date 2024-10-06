@@ -64,16 +64,16 @@ const Navbar = ({ setShowLogin }) => {
           <div className="flex justify-between items-center space-x-4">
             <img src={assets.search_icon} alt="" />
 
-            <img src={assets.basket_icon} alt="" />
+            <Link to="/cart">
+              <img src={assets.basket_icon} alt="" />
+            </Link>
 
-            {/* <NavLink to="/loginPopup"> */}
-              <button
-                className="bg-yellow-500 text-white hover:bg-black px-4 py-2 rounded-full"
-                onClick={() => setShowLogin(true)}
-              >
-                Sign in
-              </button>
-            {/* </NavLink> */}
+            <button
+              className="bg-yellow-500 text-white hover:bg-black px-4 py-2 rounded-full"
+              onClick={() => setShowLogin(true)}
+            >
+              Sign in
+            </button>
           </div>
         </div>
       </nav>
