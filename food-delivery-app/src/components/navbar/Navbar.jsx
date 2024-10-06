@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { assets } from "../../assets/assets";
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
   return (
     <div>
       <nav className="p-10">
@@ -62,17 +62,18 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="flex justify-between items-center space-x-4">
-            <Link to="/search">
-              <img src={assets.search_icon} alt="" />
-            </Link>
-            <Link to="/cart">
-              <img src={assets.basket_icon} alt="" />
-            </Link>
-            <NavLink to="/login">
-              <button className="bg-yellow-500 text-white hover:bg-black px-4 py-2 rounded-full">
+            <img src={assets.search_icon} alt="" />
+
+            <img src={assets.basket_icon} alt="" />
+
+            {/* <NavLink to="/loginPopup"> */}
+              <button
+                className="bg-yellow-500 text-white hover:bg-black px-4 py-2 rounded-full"
+                onClick={() => setShowLogin(true)}
+              >
                 Sign in
               </button>
-            </NavLink>
+            {/* </NavLink> */}
           </div>
         </div>
       </nav>

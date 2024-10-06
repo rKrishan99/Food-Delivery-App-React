@@ -22,6 +22,9 @@ export default {
         'extra-loose': '2.5',
         '12': '3rem',
       },
+      animation: {
+        fadeIn: 'fadeIn 0.5s ease-in-out',
+      },
     },
   },
   plugins: [
