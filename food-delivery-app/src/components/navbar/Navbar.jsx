@@ -1,8 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { assets } from "../../assets/assets";
+import { useContext } from "react";
+import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
+
+  const {getTotalCartAmount} = useContext(StoreContext); 
+
   return (
     <div>
       <nav className="p-10">
@@ -66,6 +71,7 @@ const Navbar = ({ setShowLogin }) => {
 
             <Link to="/cart">
               <img src={assets.basket_icon} alt="" />
+              <div className={getTotalCartAmount() === 0 ? "" : "rounded-full bg-orange-700 w-10"}></div>
             </Link>
 
             <button

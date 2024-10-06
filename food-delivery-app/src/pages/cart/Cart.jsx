@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
 
   return (
     <div className="mt-16 mx-app-margin-x my-app-margin-x">
@@ -50,7 +50,7 @@ const Cart = () => {
           <div className="flex flex-col gap-2">
             <div className="flex justify-between text-slate-950">
               <p>Subtotal</p>
-              <p>${0}</p>
+              <p>${getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="flex justify-between text-slate-950">
@@ -60,7 +60,7 @@ const Cart = () => {
             <hr />
             <div className="flex justify-between text-slate-950">
               <p>Total</p>
-              <p>${0}</p>
+              <p>${getTotalCartAmount()}</p>
             </div>
           </div>
           <button className="bg-orange-600 text-slate-50 w-96 p-2 rounded-lg">PROCEED TO CHECKOUT</button>
